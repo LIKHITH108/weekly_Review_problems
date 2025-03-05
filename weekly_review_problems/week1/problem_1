@@ -1,0 +1,20 @@
+
+# reversing the list
+
+def reverse_list(lst_of_numbers):
+    left, right = 0, len(lst_of_numbers) - 1
+    while left < right:
+        lst_of_numbers[left], lst_of_numbers[right] = lst_of_numbers[right], lst_of_numbers[left]
+        
+        left += 1
+        right -= 1
+    return lst_of_numbers
+
+
+list_len=int(input("enter the length : "))
+my_list=[]
+for i in range(list_len):
+    ele=int(input(f"enter the {i} th element : "))
+    my_list.append(ele)
+print(f"The original list:{my_list}")
+print(f"After reversing the list : {reverse_list(my_list)}")
